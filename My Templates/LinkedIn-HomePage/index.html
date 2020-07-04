@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 13px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: none;
+    }
+    
+    .navbar {
+        vertical-align: middle;
+        background-color: #283e4a;
+        padding: 0px 5px 12px 190px;
+        position: sticky;
+        top: 0;
+        right: 0;
+    }
+    
+    .text-gold {
+        color: #dccea4;
+    }
+    
+    .text-gold:hover {
+        text-decoration: underline;
+    }
+    
+    .nav-item a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .dropdown-content1,
+    .dropdown-content2 {
+        display: none;
+    }
+    
+    .nav-item {
+        display: inline-block;
+        padding: 1px 12px;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 2px;
+    }
+    
+    .nav-item a,
+    .nav-item button {
+        color: #c7d1d8;
+    }
+    
+    .nav-item:hover a {
+        color: white;
+    }
+    
+    .nav-item:hover button {
+        color: white;
+    }
+    
+    .inline-block {
+        display: inline-block;
+    }
+    
+    .float-left {
+        float: left;
+    }
+    
+    .profile-pic img {
+        border-radius: 50%;
+    }
+    
+    .icon img {
+        border-radius: 2px;
+        margin: 14px 8px -6px 3px;
+    }
+    
+    .search {
+        height: 36px;
+        width: 280px;
+        border: none;
+        border-radius: 2px;
+        color: #283e4a;
+        position: fixed;
+        top: 12px;
+        padding: 5px 12px;
+    }
+    
+    .search-cover {
+        text-align: left;
+    }
+    
+    .main-search {
+        display: none;
+    }
+    
+    .right-align {
+        float: right;
+        margin-right: 200px;
+    }
+    
+    .fas,
+    .far {
+        margin-bottom: 5px;
+        font-size: 19px !important;
+    }
+    
+    .border-1 {
+        border-right: 1px solid #c7d1d8;
+    }
+    
+    .container {
+        margin: 5px 470px;
+        padding: 10px;
+        box-shadow: 2px 2px 10px #3f3f3f57;
+    }
+    
+    .float-right {
+        float: right;
+    }
+    
+    .border-top {
+        border-top: 1px solid rgba(0, 0, 0, .15);
+    }
+    
+    .row {
+        padding: 10px;
+    }
+    
+    .margin {
+        margin: 7px 10px;
+    }
+    
+    .about {
+        font-size: 12px;
+        color: #818181;
+    }
+    
+    .bold {
+        color: #232323;
+    }
+    
+    .follow {
+        margin-top: 14px;
+        color: #006097;
+        padding: 6px;
+        font-size: 18px;
+        border-radius: 4px;
+    }
+    
+    .follow:hover {
+        background-color: rgba(152, 216, 244, .25);
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .img {
+        margin: -2px -20px;
+    }
+    
+    .tagline {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    
+    .share span {
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .share span:hover {
+        background-color: hsla(0, 0%, 81.2%, .25);
+        color: rgba(0, 0, 0, .75);
+    }
+    
+    .share span svg {
+        margin-bottom: -4px;
+    }
+    
+    .tagline img {
+        margin-bottom: -3px;
+    }
+    
+    .fa-ellipsis-h {
+        border-radius: 52%;
+        margin-top: -13px;
+        padding: 8px;
+    }
+    
+    .fa-ellipsis-h:hover {
+        background-color: hsla(0, 0%, 81.2%, .25);
+        color: rgba(0, 0, 0, .75);
+    }
+    
+    .margin-bottom {
+        margin-bottom: -3px;
+    }
+    
+    .drop-down1 {
+        background-color: transparent;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="inline-block">
+            <span class="icon">
+                <img src="img/icon.png" height="33px" width="33px" alt="">
+        </span>
+            <span>
+                <button class="search search-cover"><i class="fas fa-search"></i> &nbsp; Search</button>
+            <input type="text" name="" id="" placeholder="Search" class="search main-search">
+            </span>
+        </div>
+        <div class="right-align">
+
+            <div class="nav-item">
+                <a href="#home">
+                    <i class="fas fa-home"></i>
+                    <p class="label">Home</p>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#network"><i class="fas fa-user-friends"></i><p class="label">My Network</p></a>
+            </div>
+            <div class="nav-item">
+                <a href="#jobs">
+                    <i class="fas fa-briefcase"></i>
+                    <p class="label">Jobs</p>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#messaging">
+                    <i class="fas fa-comment-alt"></i>
+                    <p class="label">Messaging</p>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#notification">
+                    <i class="fas fa-bell"></i>
+                    <p class="label">Notifications</p>
+                </a>
+            </div>
+            <div class="nav-item border-1">
+                <button href="#home" class="drop-down1" onclick="displayer('dropdown-content1')">
+                    <div class="profile-pic"><img src="img/female.png" height="25px" width="25px" alt=""></div>
+                    Me &nbsp;<i class="fas fa-sort-down"></i>
+                    <div class="dropdown-content1">
+                        <div class="dropdown-item"><a href="">vrunda patel</a></div>
+                    </div>
+                </button>
+            </div>
+            <div class="nav-item">
+                <a href="#home">
+                    <div class="profile-pic"><i class="fas fa-th"></i></div>
+                    <div class="drop-down drop-down2 label">
+                        Work &nbsp;<i class="fas fa-sort-down"></i>
+                        <div class="dropdown-content dropdown-content2 label">
+                            <div class="dropdown-item"><a href="">vrunnnda patel</a></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-item"><span class="text-gold">Try Premium Free <br> for 1 Month</span></div>
+        </div>
+    </div>
+    <section class="container">
+        <div class="box">
+            <div class="row">
+                <p class="inline-block">
+                    ABC , XYZ and 731 other connections follows LinkedIn
+                </p>
+                <span class="float-right"><i class="fas fa-ellipsis-h"></i></span>
+            </div>
+
+            <div class="border-top row">
+                <img src="img/icon.png" class="float-left margin" height="42px" width="42px" alt="">
+                <p class="about inline-block"><b class="bold">LinkedIn</b> <br> 12,982,107 Followers <br> Promoted</p>
+                <div class="follow float-right"><i class="fas fa-plus"></i>&nbsp;Follow</div>
+                <p class="margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea libero natus a, fugiat accusantium, vitae, nobis
+                    <a href="">See More</a>
+                    <span class="hidden">alias aut odit consequatur rerum officia quis ab et pariatur fuga dolor nam mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid recusandae totam est facere ex quae distinctio esse pariatur nesciunt tempora quos perferendis provident aperiam, reprehenderit quo eaque? Nobis, asperiores.</span></p>
+            </div>
+            <div class="row">
+                <img width="580" src="https://media-exp1.licdn.com/dms/image/sync/C4E18AQGs_JSMHsLWmQ/companyUpdate-article-image-shrink_627_1200/0?e=1596672000&amp;v=beta&amp;t=uMTdavgcIboahoUbgzIwA-qXDCTYq25BeKB4p5vXK2A" loading="lazy" height="400" alt="No alt text provided for this image"
+                    id="ember980" class="ivm-view-attr__img--centered feed-shared-article__image lazy-image ember-view img">
+            </div>
+            <div class="row tagline">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="LIKE" data-test-reactions-icon-type="LIKE">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/jbbw3jbilcm53nvxebxd01gh" alt="INTEREST" data-test-reactions-icon-type="INTEREST">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97" alt="EMPATHY" data-test-reactions-icon-type="EMPATHY">
+                <span class="">759 . 9 Comments</span>
+            </div>
+            <div class="row border-top share">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M17.51 11l-2.15-3a14.81 14.81 0 01-2.25-5.29L12.74 1H10.5A2.5 2.5 0 008 3.5v.58a9 9 0 00.32 2.39L9 9H4.66A2.61 2.61 0 002 11.4a2.48 2.48 0 00.39 1.43 2.48 2.48 0 00.69 3.39 2.46 2.46 0 001.45 2.92 2.47 2.47 0 000 .36A2.5 2.5 0 007 22h4.52a8 8 0 001.94-.24l3-.76H21V11h-3.49zM19 19h-2.12l-3.41.82A6 6 0 0112 20H7a.9.9 0 01-.9-.89v-.14l.15-1-1-.4a.9.9 0 01-.55-.83.93.93 0 010-.22l.3-.95-.73-.57a.9.9 0 01-.39-.74.88.88 0 01.12-.44l.46-.72-.46-.72a.88.88 0 01-.14-.51 1 1 0 011-.87h6.64l-1.3-4.7a9 9 0 01-.33-2.37v-.55a.5.5 0 01.5-.5h.95a17.82 17.82 0 002.52 6.22L16.6 13H19v6z"></path>
+                  </svg>&nbsp;Like</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M18 10H6V9h12v1zm4-5v17l-5-4H3a1 1 0 01-1-1V5a1 1 0 011-1h18a1 1 0 011 1zm-2 1H4v10h13.7l2.3 1.84V6zm-4 6H8v1h8v-1z"></path>
+                  </svg>&nbsp;Comment</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M24 12a1.18 1.18 0 00-.36-.84L14 2v6h-3A10 10 0 001 18v4h1.87A6.11 6.11 0 019 16h5v6l9.63-9.14A1.18 1.18 0 0024 12zm-8 5.54V14H9a8.15 8.15 0 00-6 2.84A8 8 0 0111 10h5V6.48L21.81 12z"></path>
+                  </svg>&nbsp;Share</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M19.27 4.73l-4.91 12.9-2.18-5.81-5.81-2.18 12.9-4.91m2-2.73a1 1 0 00-.28 0L1 9.65l9.71 3.64L14.35 23 22 3.05A.78.78 0 0021.23 2z"></path>
+                  </svg>&nbsp;Send</span>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="box">
+            <div class="row">
+                <img src="img/female.png" width="48" height="48" alt="">
+                <p class="about inline-block"><b class="bold">Vrunda Patel</b> <br> Web developer <br> 2d &nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false" class="margin-bottom">
+                    <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zm0 1.84a5.16 5.16 0 011 .1v1.65l-1.71 1.7-.29.3v1L4.09 4.67A5.13 5.13 0 018 2.84zm1 10.22v-1.68l-.55-.28L7 10.38V9h3.09l.71.72L9.32 13zM2.84 8a5.1 5.1 0 01.67-2.49L6 8v2.38a1 1 0 00.55.89L8 12v1.16A5.17 5.17 0 012.84 8zm7.85 4.39L11.78 10a.75.75 0 00-.15-.84l-.84-.84a1 1 0 00-.7-.32H8V7l1.71-1.71a1 1 0 00.29-.7V3.24a5.14 5.14 0 01.69 9.15z"></path>
+                  </svg></p>
+                <div class="follow float-right"><i class="fas fa-plus"></i>&nbsp;Follow</div>
+                <p class="margin">Web developers are programmers who specialize in the development of applications relating to the World Wide Web or distributed network applications.
+                    <span class="hidden">alias aut odit consequatur rerum officia quis ab et pariatur fuga dolor nam mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid recusandae totam est facere ex quae distinctio esse pariatur nesciunt tempora quos perferendis provident aperiam, reprehenderit quo eaque? Nobis, asperiores.</span></p>
+            </div>
+            <div class="row tagline">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="LIKE" data-test-reactions-icon-type="LIKE">
+                <span class="">759 . 9 Comments</span>
+            </div>
+            <div class="row border-top share">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M17.51 11l-2.15-3a14.81 14.81 0 01-2.25-5.29L12.74 1H10.5A2.5 2.5 0 008 3.5v.58a9 9 0 00.32 2.39L9 9H4.66A2.61 2.61 0 002 11.4a2.48 2.48 0 00.39 1.43 2.48 2.48 0 00.69 3.39 2.46 2.46 0 001.45 2.92 2.47 2.47 0 000 .36A2.5 2.5 0 007 22h4.52a8 8 0 001.94-.24l3-.76H21V11h-3.49zM19 19h-2.12l-3.41.82A6 6 0 0112 20H7a.9.9 0 01-.9-.89v-.14l.15-1-1-.4a.9.9 0 01-.55-.83.93.93 0 010-.22l.3-.95-.73-.57a.9.9 0 01-.39-.74.88.88 0 01.12-.44l.46-.72-.46-.72a.88.88 0 01-.14-.51 1 1 0 011-.87h6.64l-1.3-4.7a9 9 0 01-.33-2.37v-.55a.5.5 0 01.5-.5h.95a17.82 17.82 0 002.52 6.22L16.6 13H19v6z"></path>
+                  </svg>&nbsp;Like</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M18 10H6V9h12v1zm4-5v17l-5-4H3a1 1 0 01-1-1V5a1 1 0 011-1h18a1 1 0 011 1zm-2 1H4v10h13.7l2.3 1.84V6zm-4 6H8v1h8v-1z"></path>
+                  </svg>&nbsp;Comment</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M24 12a1.18 1.18 0 00-.36-.84L14 2v6h-3A10 10 0 001 18v4h1.87A6.11 6.11 0 019 16h5v6l9.63-9.14A1.18 1.18 0 0024 12zm-8 5.54V14H9a8.15 8.15 0 00-6 2.84A8 8 0 0111 10h5V6.48L21.81 12z"></path>
+                  </svg>&nbsp;Share</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M19.27 4.73l-4.91 12.9-2.18-5.81-5.81-2.18 12.9-4.91m2-2.73a1 1 0 00-.28 0L1 9.65l9.71 3.64L14.35 23 22 3.05A.78.78 0 0021.23 2z"></path>
+                  </svg>&nbsp;Send</span>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="box">
+            <div class="row">
+                <img width="48" src="https://media-exp1.licdn.com/dms/image/C560BAQE8Gts4PFg9Vw/company-logo_100_100/0?e=1602115200&amp;v=beta&amp;t=pVza7ptG3zI3kX_E3h80CbuBbTpeEIkeAztZdHSF31o" loading="lazy" height="48" alt="Piblitz" id="ember1070" class="ivm-view-attr__img--centered EntityPhoto-square-3 feed-shared-actor__avatar-image lazy-image ember-view">
+                <p class="about inline-block"><b class="bold">Piblitz</b> <br> 170 Followers <br> 1 Week &nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false" class="margin-bottom">
+                    <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zm0 1.84a5.16 5.16 0 011 .1v1.65l-1.71 1.7-.29.3v1L4.09 4.67A5.13 5.13 0 018 2.84zm1 10.22v-1.68l-.55-.28L7 10.38V9h3.09l.71.72L9.32 13zM2.84 8a5.1 5.1 0 01.67-2.49L6 8v2.38a1 1 0 00.55.89L8 12v1.16A5.17 5.17 0 012.84 8zm7.85 4.39L11.78 10a.75.75 0 00-.15-.84l-.84-.84a1 1 0 00-.7-.32H8V7l1.71-1.71a1 1 0 00.29-.7V3.24a5.14 5.14 0 01.69 9.15z"></path>
+                  </svg></p>
+                <div class="follow float-right"><i class="fas fa-plus"></i>&nbsp;Follow</div>
+                <p class="margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea libero natus a, fugiat accusantium, vitae, nobis
+                    <a href="">See More</a>
+                    <span class="hidden">alias aut odit consequatur rerum officia quis ab et pariatur fuga dolor nam mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid recusandae totam est facere ex quae distinctio esse pariatur nesciunt tempora quos perferendis provident aperiam, reprehenderit quo eaque? Nobis, asperiores.</span></p>
+            </div>
+            <div class="row">
+                <img width="580" class="img" src="https://media-exp1.licdn.com/dms/image/C4E22AQGoOSkQ2Ex8KQ/feedshare-shrink_800/0?e=1596672000&amp;v=beta&amp;t=t-lFLgBCTe0jV7SCHTlO1fbDeHhjNaJMRSJMTH9N27w" loading="lazy" height="400" alt="Embrace Your Failures" id="ember94"
+                    class="ivm-view-attr__img--centered feed-shared-image__image feed-shared-image__image--constrained lazy-image ember-view"> </div>
+            <div class="row tagline">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="LIKE" data-test-reactions-icon-type="LIKE">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/jbbw3jbilcm53nvxebxd01gh" alt="INTEREST" data-test-reactions-icon-type="INTEREST">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97" alt="EMPATHY" data-test-reactions-icon-type="EMPATHY">
+                <span class="">759 . 9 Comments</span>
+            </div>
+            <div class="row border-top share">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M17.51 11l-2.15-3a14.81 14.81 0 01-2.25-5.29L12.74 1H10.5A2.5 2.5 0 008 3.5v.58a9 9 0 00.32 2.39L9 9H4.66A2.61 2.61 0 002 11.4a2.48 2.48 0 00.39 1.43 2.48 2.48 0 00.69 3.39 2.46 2.46 0 001.45 2.92 2.47 2.47 0 000 .36A2.5 2.5 0 007 22h4.52a8 8 0 001.94-.24l3-.76H21V11h-3.49zM19 19h-2.12l-3.41.82A6 6 0 0112 20H7a.9.9 0 01-.9-.89v-.14l.15-1-1-.4a.9.9 0 01-.55-.83.93.93 0 010-.22l.3-.95-.73-.57a.9.9 0 01-.39-.74.88.88 0 01.12-.44l.46-.72-.46-.72a.88.88 0 01-.14-.51 1 1 0 011-.87h6.64l-1.3-4.7a9 9 0 01-.33-2.37v-.55a.5.5 0 01.5-.5h.95a17.82 17.82 0 002.52 6.22L16.6 13H19v6z"></path>
+                  </svg>&nbsp;Like</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M18 10H6V9h12v1zm4-5v17l-5-4H3a1 1 0 01-1-1V5a1 1 0 011-1h18a1 1 0 011 1zm-2 1H4v10h13.7l2.3 1.84V6zm-4 6H8v1h8v-1z"></path>
+                  </svg>&nbsp;Comment</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M24 12a1.18 1.18 0 00-.36-.84L14 2v6h-3A10 10 0 001 18v4h1.87A6.11 6.11 0 019 16h5v6l9.63-9.14A1.18 1.18 0 0024 12zm-8 5.54V14H9a8.15 8.15 0 00-6 2.84A8 8 0 0111 10h5V6.48L21.81 12z"></path>
+                  </svg>&nbsp;Share</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M19.27 4.73l-4.91 12.9-2.18-5.81-5.81-2.18 12.9-4.91m2-2.73a1 1 0 00-.28 0L1 9.65l9.71 3.64L14.35 23 22 3.05A.78.78 0 0021.23 2z"></path>
+                  </svg>&nbsp;Send</span>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="box">
+            <div class="row">
+                <img src="img/icon.png" class="float-left margin" height="42px" width="42px" alt="">
+                <p class="about inline-block"><b class="bold">LinkedIn</b> <br> 12,982,107 Followers <br> Promoted</p>
+                <div class="follow float-right"><i class="fas fa-plus"></i>&nbsp;Follow</div>
+                <p class="margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea libero natus a, fugiat accusantium, vitae, nobis
+                    <a href="">See More</a>
+                    <span class="hidden">alias aut odit consequatur rerum officia quis ab et pariatur fuga dolor nam mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid recusandae totam est facere ex quae distinctio esse pariatur nesciunt tempora quos perferendis provident aperiam, reprehenderit quo eaque? Nobis, asperiores.</span></p>
+            </div>
+            <div class="row tagline">
+                <img class="reactions-icon social-detail-social-counts__count-icon reactions-icon__consumption--small" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="LIKE" data-test-reactions-icon-type="LIKE">
+                <span class="">759 . 9 Comments</span>
+            </div>
+            <div class="row border-top share">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M17.51 11l-2.15-3a14.81 14.81 0 01-2.25-5.29L12.74 1H10.5A2.5 2.5 0 008 3.5v.58a9 9 0 00.32 2.39L9 9H4.66A2.61 2.61 0 002 11.4a2.48 2.48 0 00.39 1.43 2.48 2.48 0 00.69 3.39 2.46 2.46 0 001.45 2.92 2.47 2.47 0 000 .36A2.5 2.5 0 007 22h4.52a8 8 0 001.94-.24l3-.76H21V11h-3.49zM19 19h-2.12l-3.41.82A6 6 0 0112 20H7a.9.9 0 01-.9-.89v-.14l.15-1-1-.4a.9.9 0 01-.55-.83.93.93 0 010-.22l.3-.95-.73-.57a.9.9 0 01-.39-.74.88.88 0 01.12-.44l.46-.72-.46-.72a.88.88 0 01-.14-.51 1 1 0 011-.87h6.64l-1.3-4.7a9 9 0 01-.33-2.37v-.55a.5.5 0 01.5-.5h.95a17.82 17.82 0 002.52 6.22L16.6 13H19v6z"></path>
+                  </svg>&nbsp;Like</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M18 10H6V9h12v1zm4-5v17l-5-4H3a1 1 0 01-1-1V5a1 1 0 011-1h18a1 1 0 011 1zm-2 1H4v10h13.7l2.3 1.84V6zm-4 6H8v1h8v-1z"></path>
+                  </svg>&nbsp;Comment</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M24 12a1.18 1.18 0 00-.36-.84L14 2v6h-3A10 10 0 001 18v4h1.87A6.11 6.11 0 019 16h5v6l9.63-9.14A1.18 1.18 0 0024 12zm-8 5.54V14H9a8.15 8.15 0 00-6 2.84A8 8 0 0111 10h5V6.48L21.81 12z"></path>
+                  </svg>&nbsp;Share</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+                    <path d="M19.27 4.73l-4.91 12.9-2.18-5.81-5.81-2.18 12.9-4.91m2-2.73a1 1 0 00-.28 0L1 9.65l9.71 3.64L14.35 23 22 3.05A.78.78 0 0021.23 2z"></path>
+                  </svg>&nbsp;Send</span>
+            </div>
+        </div>
+    </section>
+    <li-icon aria-hidden="true" type="caret-filled-down-icon" class="caret-filled-down-icon" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
+          <path d="M8.8 10.66L14 5.12a.07.07 0 00-.07-.12H2.07a.07.07 0 00-.07.12l5.2 5.54a1.1 1.1 0 001.6 0z"></path>
+        </svg></li-icon>
+
+</body>
+
+</html>
+<script>
+    // document.getElementsByClassName('dropdown1').click() = display('dropdown1');
+
+    // function display(display_content) {
+    //     document.getElementById(display_content).style.display = 'block';
+    // };
+    var disp = function(displayer) {
+        document.getElementById(display_content).style.display = 'block';
+    };
+</script>

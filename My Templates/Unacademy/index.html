@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/shade.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="jQuery/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    header img {
+        margin: 10px;
+        margin-left: 180px;
+    }
+    
+    .form-control {
+        display: inline-block;
+        width: 200px;
+        margin-right: 400px;
+    }
+    
+    nav input {
+        padding: 6px;
+    }
+    
+    .jumbotron {
+        background-image: url(https://static.uacdn.net/production/_next/static/images/goal/boy.svg), url(https://static.uacdn.net/production/_next/static/images/goal/girl.svg), linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(229, 244, 255, 0.44) 100%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom 20px, right bottom 20px, center center;
+    }
+    
+    .jumbotron .btn {
+        font-size: 18px;
+        margin: 30px;
+    }
+    
+    .tup {
+        position: absolute;
+        left: 710px;
+        top: 658px;
+        background-color: white;
+        left: calc(50% - 71px);
+        border-left: 72px solid rgba(229, 244, 255, 0.44);
+        border-right: 72px solid rgba(229, 244, 255, 0.44);
+        border-bottom: 35px solid rgb(255, 255, 255);
+        width: 0px;
+        height: 0px;
+    }
+    
+    main {
+        margin-top: -32px;
+        background-color: rgb(242, 250, 253);
+        height: 1200px;
+    }
+    
+    .container1 {
+        border-radius: 10px;
+        height: 720px;
+        box-shadow: 2px 2px 12px #c7c7c73b;
+    }
+    
+    .container {
+        padding: 30px;
+    }
+    
+    .card {
+        border: none;
+    }
+    
+    .row1 .card-body,
+    .row2 .card-body {
+        padding: 20px;
+    }
+    
+    .row1 .card-text,
+    .row2 .card-text {
+        font-size: 18px;
+        padding: 18px 30px;
+        margin-left: 100px;
+        text-align: justify;
+    }
+    
+    .row3 .col p {
+        font-size: 22px;
+        padding: 5px;
+    }
+    
+    .video-desc,
+    .row3 a {
+        /* text-decoration: none; */
+        /* Cursor: text !important; */
+        /* pointer-events: none; */
+        Text-Decoration: None !important;
+        color: #000;
+        position: relative;
+    }
+    
+    .video-desc~p {
+        margin: -18px;
+        font-size: smaller !important;
+    }
+    
+    .play {
+        position: absolute;
+        bottom: 28px;
+        left: 25px;
+        font-size: 22px;
+    }
+    
+    .live {
+        padding: 3px 0px !important;
+        position: absolute;
+        background-color: hotpink;
+        bottom: 27px;
+        left: 110px;
+        font-size: small;
+        width: 45px;
+    }
+    
+    .row3 {
+        position: relative;
+    }
+    
+    .live-lecs1 {
+        padding: 60px;
+    }
+    
+    .live-lecs2 {
+        position: absolute;
+        top: -70px;
+        width: 50%;
+        left: 450px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="bg-light">
+            <!-- <img src="img/logo.png" height="50px" width="200px" alt=""> -->
+            <img src="https://static.uacdn.net/production/_next/static/images/logo.svg" alt="Company Logo" class="Logo__LogoStyled-ccjsak-0 ilSTA-D"> <select class="form-control" id="sel1" name="sellist1">
+              <option>UPSC CSE</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <label class="m-2" for=""><i class="fas fa-search"></i></label>
+            <input type="text" placeholder="Search">
+            <button class="btn btn-success m-2">Login</button>
+        </nav>
+        <div class="jumbotron bg-light text-center">
+            <a class="btn-primary text-white btn" href="https://youtu.be/hz5wsiXWeeo" target="_blank">Listen to our new anthem &nbsp;<i class="fas fa-chevron-right"></i></a><br><br>
+            <h1 class="display-4 text-dark"> <b> Crack UPSC CSE with <br> India's largest learning platform</b></h1><br>
+            <div class="h3 text-dark"> Get Plus subscription and access unlimited live and recorded <br> courses from India's best educators</div><br>
+            <div class="p-3 btn btn-success font-weight-bold">Get Subscription</div>
+            <br>
+            <div class="tup"></div>
+    </header>
+    <main>
+        <section class="container container1 bg-white text-center">
+            <h1 class="text-dark font-weight-bold">What you’ll get <br><br></h1>
+            <div class="row row1">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title font-weight-bold">
+                                <img src="https://static.uacdn.net/production/_next/static/images/goal/benefitchat.svg" alt="-" class="SecondSection__Image-sc-1q57cd9-7 hvYKqn"> Daily Live classes</h3>
+                            <p class="card-text">Chat with your educator, engage in discussions, ask your doubts, and answer polls - all while the class is going on</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title font-weight-bold">
+                                <img src="https://static.uacdn.net/production/_next/static/images/goal/benefittest.svg" alt="-" class="SecondSection__Image-sc-1q57cd9-7 hvYKqn"> Live tests & quizzes</h3>
+                            <p class="card-text">Evaluate your preparation with our regular mock tests and quizzes and get detailed analysis on your performance </p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row row2">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title font-weight-bold">
+                                <img src="https://static.uacdn.net/production/_next/static/images/goal/benefitcourses.svg" alt="-" class="SecondSection__Image-sc-1q57cd9-7 hvYKqn"> Structured courses</h3>
+                            <p class="card-text">All our courses are structured in line with your exam syllabus to help you best prepare for it</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title font-weight-bold">
+                                <img src="https://static.uacdn.net/production/_next/static/images/goal/benefitaccess.svg" alt="-" class="SecondSection__Image-sc-1q57cd9-7 hvYKqn"> Unlimited access</h3>
+                            <p class="card-text">One subscription gets you access to all our live and recorded courses to watch from the comfort of any of your devices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="m-3 h3 text-dark float-left">UPSC CSE subscription starts <br> from
+                <a class="text-primary inline-block"> ₹2,000/month</a>
+            </div>
+            <a class="m-4 h3 text-success float-right"> <u>Pricing</u> </a>
+        </section><br><br><br><br>
+        <section class="container container2">
+            <div class="row row3">
+                <div class="col-sm-3">
+                    <div class="card card1 bg-transparent">
+                        <div class="card-body">
+                            <h3 class="card-title font-weight-bold">
+                                Learn from the Legends
+                            </h3>
+                            <p class="card-text">Watch lessons from the best as they share their stories, shortcuts, failures, and successes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="card card2">
+                        <div class="card-body p-0 shadow rounded">
+                            <div class="float-left p-1">
+                                <h4 class="card-title font-weight-bold m-3">
+                                    Starting Starbucks: Insights <br> from a Co- Founder <br>- Zev Siegl
+                                </h4>
+                                <p class="card-text m-3">Starts on 6th June, 8:00 PM</p>
+                                <p class="text-success m-3 h3 inline-block"><u>Explore More</u><br></p>
+                            </div>
+                            <img class="float-right co-founder rounded-right" src="https://edge.uacdn.net/static/thumbnail/course/0958ca060fc442418bd5bc14a6a788ae.png?q=100&amp;w=512" alt="Starting Starbucks: Insights from a Co-Founder - Zev Siegl" class="LegendsBanner__Image-sc-726ain-5 bJCFqP"
+                                width="300px" height="220px">
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br><br><br><br><br>
+            <div class="row row3 shadow bg-white rounded p-2 m-3">
+                <div class="col live-lecs1">
+                    <br><br>
+                    <span class="badge badge-warning text-white p-1">Free <br> </span><br>
+                    <h1 class="text-dark">
+                        Live classes
+                    </h1>
+                    <p>Experience Plus for free and start <br> learning from the best</p>
+                    <p class="text-success m-3 h3 inline-block"><u>See all</u><br></p>
+                    <br><br>
+                </div>
+                <div class="col live-lecs2">
+                    <div class="m-2 card shadow">
+                        <a class="rounded px-0" href="https://unacademy.com/class/the-mughal-empire/ZWAC5VHS">
+                            <img class="float-left m-3 rounded" src="https://edge.uacdn.net/static/thumbnail/course/d12bec68e196404f93d92fbab575292f.png?q=100&amp;w=512&amp;fm=webp" alt="" orientation="vertical" class="Thumbnail__StyledImage-g8hufe-0 kVtcyG" height="90px" width="150px">
+                            <i class="far fa-play-circle text-secondary play"></i>
+                            <span class="badge badge-danger live">LIVE</span>
+                            <div class="video-desc m-3">Mughal Empire</div>
+                            <p class="text-secondary">Today 1:00 Pm</p>
+                            <p class="text-dark m-4">Shahank Shekhar Roy</p>
+                        </a>
+                    </div>
+                    <div class="m-2 card shadow">
+                        <a class="rounded px-0" href="https://unacademy.com/class/the-mughal-empire/ZWAC5VHS">
+                            <img class="float-left m-3 rounded" src="https://edge.uacdn.net/static/thumbnail/course/5c4a557197b74cbf818fcaae3058c173.png?q=100&amp;w=512&amp;fm=webp" alt="" orientation="vertical" class="Thumbnail__StyledImage-g8hufe-0 kVtcyG" height="90px" width="150px">                            <i class="far fa-play-circle text-secondary play"></i>
+                            <span class="badge badge-danger live">LIVE</span>
+                            <div class="video-desc m-3">Environment and Ecology..</div>
+                            <p class="text-secondary">Today 1:00 Pm</p>
+                            <p class="text-dark m-4">Anupama Singh</p>
+                        </a>
+                    </div>
+                    <div class="m-2 card shadow">
+                        <a class="rounded px-0" href="https://unacademy.com/class/the-mughal-empire/ZWAC5VHS">
+                            <img class="float-left m-3 rounded" src="https://edge.uacdn.net/static/thumbnail/course/cb23f84a8367425295db19661acac179.png?q=100&amp;w=512&amp;fm=webp" alt="" orientation="vertical" class="Thumbnail__StyledImage-g8hufe-0 kVtcyG" height="90px" width="150px">
+                            <i class="far fa-play-circle text-secondary play"></i>
+                            <span class="badge badge-danger live">LIVE</span>
+                            <div class="video-desc m-3">Analysis of TrendingEditorials an..</div>
+                            <p class="text-secondary">Today 1:00 Pm</p>
+                            <p class="text-dark m-4">Thummala Sandeep Bhushan</p>
+                        </a>
+                    </div>
+                    <div class="m-2 card shadow">
+                        <a class="rounded px-0" href="https://unacademy.com/class/the-mughal-empire/ZWAC5VHS">
+                            <img class="float-left m-3 rounded" src="https://edge.uacdn.net/static/thumbnail/course/3c78d76135d94a3f828d10e8c7e18b06.jpg?q=100&w=512&fm=webp" alt="" orientation="vertical" class="Thumbnail__StyledImage-g8hufe-0 kVtcyG" height="90px" width="150px">
+                            <i class="far fa-play-circle text-secondary play"></i>
+                            <span class="badge badge-danger live">LIVE</span>
+                            <div class="video-desc m-3">Discussion and concept of Hotspot..</div>
+                            <p class="text-secondary">Today 1:00 Pm</p>
+                            <p class="text-dark m-4">Sudarshan Gurjar</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

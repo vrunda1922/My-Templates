@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="jQuery/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+<style>
+    * {
+        font-family: cursive;
+    }
+    
+    .cell {
+        height: 200px;
+        margin-left: 25px;
+        font-size: 100px;
+        text-align: center;
+        margin-top: 200px;
+        border-radius: 15px;
+    }
+    
+    .cell1 {
+        font-size: 60px;
+        height: 100px;
+        padding: 2px;
+        border-radius: 50%;
+        margin-top: 260px;
+    }
+    
+    .play {
+        font-size: 30px;
+    }
+    
+    .pop {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        z-index: 10;
+    }
+    
+    .submit,
+    .Next,
+    .congo,
+    .cw {
+        margin-top: 125px;
+        font-size: 50px;
+        margin-left: 20px;
+    }
+    
+    .cw {
+        font-size: 40px;
+    }
+    
+    .correct-alert,
+    .wrong-alert {
+        /* position: absolute;
+        top: 200px;
+        left: 200px;
+        z-index: 10;
+     */
+        margin-top: 30px;
+    }
+    
+    .congoo {
+        background-color: rgb(255, 239, 241);
+    }
+    
+    .alert-btn {
+        font-size: 30px;
+        margin: 25px;
+    }
+</style>
+
+<body>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center congoo">
+                <img src="img/dancinggirl.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/dancinggirl2.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/h3.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/h4.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-darkBluishCyan">
+                <img src="img/h5.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="text-white congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/h6.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center congoo">
+                <img src="img/h7.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-darkPink">
+                <img src="img/h8.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="text-white congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-yellowShade">
+                <img src="img/h9.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-grayShade">
+                <img src="img/h10.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/cryinggirl.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/cryinggirl2.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s3.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-paleWhite">
+                <img src="img/s4.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-paleWhite">
+                <img src="img/s5.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s6.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s7.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-paleOrange">
+                <img src="img/s8.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-smokey">
+                <img src="img/s9.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s10.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>

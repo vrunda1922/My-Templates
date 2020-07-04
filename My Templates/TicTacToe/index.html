@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="jQuery/jquery.min.js"></script>
+</head>
+<style>
+    .inputter {
+        height: 200px;
+        margin: 5px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 120px;
+        background-color: white;
+    }
+    
+    .modal {
+        position: absolute;
+        top: 300px;
+        left: -55px;
+    }
+    
+    body {
+        background-image: url('img/tic-tac-toe-game-on-wooden-background-J0KM0P.jpg');
+        background-size: cover;
+        background-position: 0px 0px;
+    }
+    
+    .row1 {
+        background-color: white;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0.65;
+        width: 1535.2px;
+        height: 753px;
+        background-color: #232323;
+    }
+</style>
+
+<body>
+    <section class="container">
+        <div class="overlay">
+
+        </div>
+        <section class="row row1 text-center">
+            <div class="col-md-6 rounded text-center player1 bg-primary text-white">
+                <h1 class="display-4">Player - 1</h1>
+            </div>
+            <div class="col-md-6 rounded text-center text-primary player2">
+                <h1 class="display-4">Player - 2</h1>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-center">
+                <section class="row p-3">
+                    <div id="inputter1" class="col-md-3 shadow rounded inputter ml-5">
+
+                    </div>
+                    <div id="inputter2" class="col-md-3 shadow rounded inputter">
+
+                    </div>
+                    <div id="inputter3" class="col-md-3 shadow rounded inputter">
+
+                    </div>
+                    <div id="inputter4" class="col-md-3 shadow rounded inputter ml-5">
+
+                    </div>
+                    <div id="inputter5" class="col-md-3 shadow rounded inputter">
+
+                    </div>
+                    <div id="inputter6" class="col-md-3 shadow rounded inputter">
+
+                    </div>
+                    <div id="inputter7" class="col-md-3 shadow rounded inputter ml-5">
+
+                    </div>
+                    <div id="inputter8" class="col-md-3 shadow rounded inputter">
+
+                    </div>
+                    <div id="inputter9" class="col-md-3 shadow rounded inputter">
+
+                    </div>
+            </div>
+            <div class="col-md-1"></div>
+
+            </section>
+        </section>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content p-1">
+                <div class="modal-header mt-3">
+                    <h5 class="modal-title" id="exampleModalLabel">Congratulations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <a href="index.html" class="btn btn-primary ">Replay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        var flag = 0;
+        var input1 = "",
+            input2 = "",
+            input3 = "",
+            input4 = "",
+            input5 = "",
+            input6 = "",
+            input7 = "",
+            input8 = "",
+            input9 = "";
+        $('#inputter1').text("");
+        $('#inputter2').text("");
+        $('#inputter3').text("");
+        $('#inputter4').text("");
+        $('#inputter5').text("");
+        $('#inputter6').text("");
+        $('#inputter7').text("");
+        $('#inputter8').text("");
+        $('#inputter9').text("");
+        $('.inputter').click(function() {
+            $('.player1').toggleClass('text-primary');
+            $('.player2').toggleClass('text-primary');
+            $('.player2').toggleClass('bg-primary text-white');
+            $('.player1').toggleClass('bg-primary text-white');
+            if (flag % 2 == 0) {
+                $(this).text('O');
+                flag = flag + 1;
+            } else {
+                $(this).text('X');
+                flag = flag + 1;
+            }
+
+            input1 = $('#inputter1').text();
+            input2 = $('#inputter2').text();
+            input3 = $('#inputter3').text();
+            input4 = $('#inputter4').text();
+            input5 = $('#inputter5').text();
+            input6 = $('#inputter6').text();
+            input7 = $('#inputter7').text();
+            input8 = $('#inputter8').text();
+            input9 = $('#inputter9').text();
+            if (input1 == input2 && input2 == input3) {
+                if (input1 == 'O') {
+                    $('#inputter1,#inputter2,#inputter3').addClass('text-success');
+                    console.log(input1);
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                }
+                if (input1 == 'X') {
+                    $('#inputter1,#inputter2,#inputter3').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input4 == input5 && input5 == input6) {
+                if (input4 == 'O') {
+                    $('#inputter4,#inputter5,#inputter6').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input4 == 'X') {
+                    $('#inputter4,#inputter5,#inputter6').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input7 == input8 && input8 == input9) {
+                if (input7 == 'O') {
+                    $('#inputter7,#inputter8,#inputter9').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input7 == 'X') {
+                    $('#inputter7,#inputter8,#inputter9').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input1 == input4 && input4 == input7) {
+                if (input7 == 'O') {
+                    $('#inputter1,#inputter4,#inputter7').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input7 == 'X') {
+                    $('#inputter1,#inputter4,#inputter7').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input2 == input5 && input5 == input8) {
+                if (input2 == 'O') {
+                    $('#inputter2,#inputter5,#inputter8').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input2 == 'X') {
+                    $('#inputter2,#inputter5,#inputter8').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input3 == input6 && input6 == input9) {
+                if (input3 == 'O') {
+                    $('#inputter3,#inputter6,#inputter9').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input3 == 'X') {
+                    $('#inputter3,#inputter6,#inputter9').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input1 == input5 && input5 == input9) {
+                if (input1 == 'O') {
+                    $('#inputter1,#inputter5,#inputter9').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input1 == 'X') {
+                    $('#inputter1,#inputter5,#inputter9').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+            if (input3 == input5 && input5 == input7) {
+                if (input7 == 'O') {
+                    $('#inputter3,#inputter5,#inputter7').addClass('text-success');
+                    console.log(input1);
+                    $('.player1').addClass('bg-success text-light');
+                    $('.player2').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 1 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+                if (input7 == 'X') {
+                    $('#inputter3,#inputter5,#inputter7').addClass('text-success');
+                    $('.player2').addClass('bg-success text-light');
+                    $('.player1').addClass('bg-danger text-light');
+                    $('.modal-body').text('Player 2 Wins');
+                    $('.modal').css("opacity", "1");
+                    $('.modal').css("z-index", "100");
+                    $('.modal').fadeIn();
+                }
+            }
+
+        });
+    })
+</script>

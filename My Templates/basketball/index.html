@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+    .heading {
+        background-color: black;
+        font-size: 60px;
+    }
+    
+    .tagline {
+        font-size: 40px;
+        font-family: fantasy;
+    }
+    
+    .body {
+        font-size: 25px;
+        background-image: url('img/artimg-2.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 719px;
+        padding: 0px;
+    }
+    
+    .overlay {
+        height: 719px;
+        background-color: rgba(65, 105, 225, 0.301);
+        width: 100%;
+        z-index: 10000;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .typewriter {
+        position: absolute;
+        top: 50px;
+        left: 220px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .typewriter h1 a {
+        text-decoration: none;
+        color: rgb(37, 83, 221);
+        font-size: 120px;
+    }
+    
+    .options {
+        z-index: 10000000000000000000000000000000000000000000000000000000000000000;
+        font-size: 22px;
+        padding: 5px;
+        width: 35px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-decoration: none;
+        /* transform: translateX(0px); */
+        transition: 1s ease-in-out;
+    }
+    
+    .options1 {
+        z-index: 10000000000000000000000000000000000000000000000000000000000000000;
+        font-size: 22px;
+        padding: 5px;
+        width: 35px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        position: absolute;
+        top: 230px;
+        left: 0;
+        text-decoration: none;
+        /* transform: translateX(0px); */
+        transition: 1s ease-in-out;
+    }
+    
+    .icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .register {
+        position: absolute;
+        top: 680px;
+        left: 0;
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 34px;
+        z-index: 100000000000000000000;
+    }
+    
+    .register a {
+        color: royalblue;
+    }
+</style>
+
+<body style="position: fixed;">
+    <!-- <div class="btn white heading">
+        LOC Basketball Tournament
+        <br>
+        <i class="tagline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Go fight for it Team</i>
+    </div> -->
+
+
+    <div class="btn white body" id="videoBody">
+        <!-- <video width="1550px" controls autoplay>
+            <source src="img/BASKETBALL PROMO VIDEO EDITED BY @MONTYTHEMOTIVE.mp4" type="video/mp4">
+        </video> -->
+        <!-- <iframe width="1550" height="850" src="https://www.youtube.com/embed/oq2wJscMmlE?autoplay=1" frameborder="0"></iframe> -->
+    </div>
+
+    <div class="typewriter">
+        <h1>
+            <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to the world of basketball", "Presenting"," The Biggest  basketball Tournament ever..", "For strongest Teams..", "With Excellence "," Courage","Desire"," And great skills..","LCO","Go fight for it Team" ]'>
+                <span class="wrap"></span>
+            </a>
+        </h1>
+
+    </div>
+
+    <div class="overlay">
+        <img class="icon" src="img/sports-logo-transparent.png" class="float-bottom" height="200" width="200" alt="">
+    </div>
+    <a class="options white bg-blue" href="About.html">
+        <b>   E X P L O R E  </b>
+    </a>
+    <a class="options1 white bg-blue" href="form2.html">
+        <b>   R E G I S T E R  </b>
+    </a>
+    <p class="register">Note : Click <a href="Tournament.html">here</a> to to know more..</p>
+</body>
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 1) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) {
+            delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+    };
+    var videoBody = document.getElementById('videoBody');
+    var videoElement = `<video width="1550" id="myVideo" autoplay playsinline loop preload="auto">
+            <source src="http://127.0.0.1:5500/img/videoBanner.mp4" type="video/mp4">
+        </video>`;
+    window.onload = function() {
+        setTimeout(function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        }, 1000);
+
+        videoBody.innerHTML = videoElement;
+        var x = document.getElementById("myVideo").play();
+        console.log('video loaded');
+
+    };
+</script>
+
+</html>

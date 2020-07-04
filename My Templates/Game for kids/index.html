@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="jQuery/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+<style>
+    .container .btn {
+        width: 300px;
+        display: inline-block;
+        height: 104px;
+        padding: 29px 50px;
+        font-family: cursive;
+        font-size: 25px;
+        border: none;
+        border-radius: 68px;
+    }
+    
+    .row {
+        display: block;
+    }
+    
+    .pop {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        z-index: 10;
+    }
+    
+    .starter {
+        width: 130%;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    /* .video-cover {
+        width: 120%;
+        height: 250px;
+        background-color: red;
+        position: fixed;
+        left: 0;
+        top: 0;
+    } */
+</style>
+
+<body class="bg-light">
+    <video src="img/My Video_Trim.mp4" type="video/mp4" class="starter pop" autoplay>    <div class="video-cover"></div>
+    </video>
+    <div class="container content text-center p-5">
+        <section class="row text-center p-5">
+            <a href="addition.html" class="btn bg-pink mt-3 text-white">ADDITION</a>
+        </section>
+        <section class="row  text-center p-5">
+            <a href="subtraction.html" class="btn btn-primary mt-3">SUBTRACTION</a>
+        </section>
+        <section class="row text-center p-5">
+            <a href="tables.html" class="btn text-white bg-orange mt-3">TABLES</a>
+        </section>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $('.content').hide();
+        $('video').on('ended', function() {
+            $(this).fadeOut();
+        });
+        $('.content').show();
+    })
+</script>

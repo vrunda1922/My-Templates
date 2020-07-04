@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="jQuery/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+<style>
+    * {
+        font-family: cursive;
+    }
+    
+    .cell {
+        height: 200px;
+        margin-left: 25px;
+        font-size: 100px;
+        text-align: center;
+        margin-top: 200px;
+        border-radius: 15px;
+    }
+    
+    .cell1 {
+        font-size: 60px;
+        height: 100px;
+        padding: 2px;
+        border-radius: 50%;
+        margin-top: 260px;
+    }
+    
+    .play {
+        font-size: 30px;
+    }
+    
+    .pop {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        z-index: 10;
+    }
+    
+    .submit,
+    .Next,
+    .congo,
+    .cw {
+        margin-top: 125px;
+        font-size: 50px;
+        margin-left: 20px;
+    }
+    
+    .cw {
+        font-size: 40px;
+    }
+    
+    .correct-alert,
+    .correct-alert2,
+    .correct-alert3,
+    .correct-alert4,
+    .correct-alert5,
+    .correct-alert6,
+    .correct-alert7,
+    .correct-alert8,
+    .correct-alert9,
+    .correct-alert10,
+    .wrong-alert,
+    .wrong-alert2,
+    .wrong-alert3,
+    .wrong-alert4,
+    .wrong-alert5,
+    .wrong-alert6,
+    .wrong-alert7,
+    .wrong-alert8,
+    .wrong-alert9,
+    .wrong-alert10 {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        z-index: 10;
+    }
+    
+    .congoo {
+        background-color: rgb(255, 239, 241);
+    }
+    
+    .alert-btn {
+        font-size: 30px;
+        margin: 25px;
+    }
+    
+    .closee {
+        position: fixed;
+        top: 10px;
+        right: 22px;
+        font-size: 52px;
+    }
+</style>
+
+<body>
+    <section class="container align-middle pop animate__animated animate__bounceInDown">
+        <section class="row">
+            <div class="col-md-12 text-center bg-light p-5 align-middle rounded shadow">
+                <h1 class="display-1 dark-orange">WELCOME KIDS</h1>
+                <button class="btn btn-success play">Let's Play</button>
+            </div>
+        </section>
+    </section>
+    <section class="container content animate__animated">
+        <section class="row">
+            <div class="col-md-2 p-4 cell bg-violet text-white shadow" id="a">11</div>
+            <div class="col-md-1 cell cell1 bg-pink text-white shadow" id="op">+</div>
+            <div class="col-md-2 p-4 cell bg-orange text-white shadow" id="b">12</div>
+            <div class="col-md-1 cell cell1 bg-dblue text-white shadow">=</div>
+            <input type="text" class="col-md-2 p-4 cell bg-yellow text-white shadow border-0" id="ans">
+        </section>
+        <section class="row">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary submit">OK</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center congoo">
+                <img src="img/dancinggirl.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert2">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/dancinggirl2.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert3">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/h3.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert4">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/h4.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert5">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-darkBluishCyan">
+                <img src="img/h5.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="text-white congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert6">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/h6.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert7">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center congoo">
+                <img src="img/h7.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert8">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-darkPink">
+                <img src="img/h8.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="text-white congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert9">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-yellowShade">
+                <img src="img/h9.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container correct-alert10">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-grayShade">
+                <img src="img/h10.gif" class="float-left congo-img" height="250px" width="300px" alt="">
+                <span class="brown congo">CONGRATULATIONS</span><br>
+                <span class="text-success cw"><i class="far fa-check-circle"></i> &nbsp; Correct Answer</span><br>
+                <button class="btn btn-primary Next alert-btn">Next</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/cryinggirl.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert2">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/cryinggirl2.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert3">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s3.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert4">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-paleWhite">
+                <img src="img/s4.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert5">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-paleWhite">
+                <img src="img/s5.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert6">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s6.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert7">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s7.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert8">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-paleOrange">
+                <img src="img/s8.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert9">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-smokey">
+                <img src="img/s9.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container wrong-alert10">
+        <section class="row">
+            <div class="col-md-12 shadow rounded p-5 text-center bg-white">
+                <img src="img/s10.gif" height="250px" width="300px" class="float-left" alt="">
+                <span class="brown congo">OOPS!!!</span><br>
+                <span class="text-danger cw"><i class="far fa-times-circle"></i> &nbsp; Wrong Answer</span><br>
+                <button class="btn btn-primary try alert-btn">Try again!</button>
+            </div>
+        </section>
+    </section>
+    <section class="container m-3">
+        <section class="row">
+            <div class="col-md-12">
+                <a href="index.html" class="text-danger closee"><i class="text-danger fas fa-times-circle"></i></a>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $('.content').hide();
+        $('.correct-alert').hide();
+        $('.correct-alert2').hide();
+        $('.correct-alert3').hide();
+        $('.correct-alert4').hide();
+        $('.correct-alert5').hide();
+        $('.correct-alert6').hide();
+        $('.correct-alert7').hide();
+        $('.correct-alert8').hide();
+        $('.correct-alert9').hide();
+        $('.correct-alert10').hide();
+        $('.wrong-alert').hide();
+        $('.wrong-alert2').hide();
+        $('.wrong-alert3').hide();
+        $('.wrong-alert4').hide();
+        $('.wrong-alert5').hide();
+        $('.wrong-alert6').hide();
+        $('.wrong-alert7').hide();
+        $('.wrong-alert8').hide();
+        $('.wrong-alert9').hide();
+        $('.wrong-alert10').hide();
+        var i = 1;
+        $('.play').click(function() {
+            $('.pop').removeClass('animate__bounceInDown animate_animated');
+            $('.pop').addClass('animate__zoomOut animate_animated');
+            $('.pop').css('z-index', '-1');
+            $('.content').addClass('animate__zoomIn');
+            $('.content').show();
+            $('.submit').click(function() {
+                var aa = Number($('#a').text());
+                var bb = Number($('#b').text());
+                var anss = Number($('#ans').val());
+                var opp = $('#op').text();
+                if (opp == '+') {
+                    if (aa + bb == anss) {
+                        switch (i) {
+                            case 1:
+                                $('.correct-alert').fadeIn();
+                                break;
+                            case 2:
+                                $('.correct-alert2').fadeIn();
+                                break;
+                            case 3:
+                                $('.correct-alert3').fadeIn();
+                                break;
+                            case 4:
+                                $('.correct-alert4').fadeIn();
+                                break;
+                            case 5:
+                                $('.correct-alert5').fadeIn();
+                                break;
+                            case 6:
+                                $('.correct-alert6').fadeIn();
+                                break;
+                            case 7:
+                                $('.correct-alert7').fadeIn();
+                                break;
+                            case 8:
+                                $('.correct-alert8').fadeIn();
+                                break;
+                            case 9:
+                                $('.correct-alert9').fadeIn();
+                                break;
+                            case 10:
+                                $('.correct-alert10').fadeIn();
+                                break;
+                        }
+                    } else {
+                        console.log(i);
+                        switch (i) {
+                            case 1:
+                                $('.wrong-alert').fadeIn();
+                                break;
+                            case 2:
+                                $('.wrong-alert2').fadeIn();
+                                break;
+                            case 3:
+                                $('.wrong-alert3').fadeIn();
+                                break;
+                            case 4:
+                                $('.wrong-alert4').fadeIn();
+                                break;
+                            case 5:
+                                $('.wrong-alert5').fadeIn();
+                                break;
+                            case 6:
+                                $('.wrong-alert6').fadeIn();
+                                break;
+                            case 7:
+                                $('.wrong-alert7').fadeIn();
+                                break;
+                            case 8:
+                                $('.wrong-alert8').fadeIn();
+                                break;
+                            case 9:
+                                $('.wrong-alert9').fadeIn();
+                                break;
+                            case 10:
+                                $('.wrong-alert10').fadeIn();
+                                break;
+                        }
+                    }
+                }
+
+                $('.Next').click(function() {
+                    aa = aa + 3;
+                    bb = bb + 6;
+                    $('#a').text(aa);
+                    $('#b').text(bb);
+                    $('#ans').val('');
+                    switch (i) {
+                        case 1:
+                            $('.correct-alert').hide();
+                            i = i + 1;
+                            break;
+                        case 2:
+                            $('.correct-alert2').hide();
+                            i = i + 1;
+                            break;
+                        case 3:
+                            $('.correct-alert3').hide();
+                            i = i + 1;
+                            break;
+                        case 4:
+                            $('.correct-alert4').hide();
+                            i = i + 1;
+                            break;
+                        case 5:
+                            $('.correct-alert5').hide();
+                            i = i + 1;
+                            break;
+                        case 6:
+                            $('.correct-alert6').hide();
+                            i = i + 1;
+                            break;
+                        case 7:
+                            $('.correct-alert7').hide();
+                            i = i + 1;
+                            break;
+                        case 8:
+                            $('.correct-alert8').hide();
+                            i = i + 1;
+                            break;
+                        case 9:
+                            $('.correct-alert9').hide();
+                            i = i + 1;
+                            break;
+                        case 10:
+                            $('.correct-alert10').hide();
+                            i = 1;
+                            break;
+                    }
+                })
+                $('.try').click(function() {
+                    $('#ans').val('');
+                    switch (i) {
+                        case 1:
+                            $('.wrong-alert').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 2:
+                            $('.wrong-alert2').hide();
+                            i = i + 1;
+                            break;
+                            console.log(i);
+                        case 3:
+                            $('.wrong-alert3').hide();
+                            i = i + 1;
+                            break;
+                        case 4:
+                            $('.wrong-alert4').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 5:
+                            $('.wrong-alert5').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 6:
+                            $('.wrong-alert6').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 7:
+                            $('.wrong-alert7').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 8:
+                            $('.wrong-alert8').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 9:
+                            $('.wrong-alert9').hide();
+                            i = i + 1;
+                            console.log(i);
+                            break;
+                        case 10:
+                            $('.wrong-alert10').hide();
+                            i = 1;
+                            console.log(i);
+                            break;
+                    }
+                })
+            });
+        })
+    })
+</script>

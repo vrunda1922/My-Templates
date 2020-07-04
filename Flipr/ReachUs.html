@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+    .heading {
+        font-size: 100px;
+        padding: 50px;
+        text-align: left;
+        width: 100%;
+        height: 500px;
+        /* background: rgb(201, 207, 243);
+        background: linear-gradient(110deg, rgba(201, 207, 243, 1) 1%, rgba(164, 174, 248, 1) 45%, rgba(121, 138, 248, 1) 50%, rgba(1, 24, 150, 1) 55%, rgba(2, 36, 134, 1) 100%); */
+        /* color: rgba(2, 36, 134, 1); */
+        background-color: whitesmoke;
+        color: #232323;
+    }
+    
+    .quote {
+        font-style: italic;
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    
+    .heading .float-right {
+        height: 500px;
+        width: 820px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #232323;
+        -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .map {
+        margin: 20px;
+        border-radius: 5px;
+    }
+    
+    .form {
+        float: left;
+        width: 50%;
+        background-color: #2e2e2e;
+        color: white;
+        padding: 60px;
+        font-size: 20px;
+        border-radius: 15px;
+        margin: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        box-shadow: 1px 8px 10px #44444463;
+    }
+    
+    .form input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        border: 3px solid whitesmoke;
+        display: block;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 20px;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding-left: 40px;
+    }
+    
+    .form input[type="checkbox"] {
+        display: inline;
+        margin-left: 10px;
+    }
+    
+    .form input[type="submit"] {
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .form input:focus:invalid {
+        border: 3px solid tomato;
+        background-color: rgb(245, 198, 198);
+    }
+    
+    .form input:hover {
+        box-shadow: 2px 2px 10px 0px #ffffffab;
+    }
+    
+    .form input:focus:valid {
+        border: 3px solid rgb(1, 202, 1);
+        background-color: rgb(196, 235, 196);
+    }
+    
+    .form input:read-write {
+        background-color: whitesmoke;
+    }
+    
+    .form label {
+        margin: 0 auto;
+        font-size: 25px;
+    }
+    
+    .form .icon-container {
+        position: relative;
+    }
+    
+    .form .icon {
+        position: absolute;
+        top: 62px;
+        left: 15px;
+        color: #232323;
+    }
+    
+    body {
+        opacity: 1;
+        transition: 1s opacity;
+    }
+    
+    body.fade {
+        opacity: 0;
+        transition: none;
+    }
+</style>
+
+<body>
+    <script>
+        document.body.classList.add('fade');
+    </script>
+
+    <div class="heading"><br>
+        <div><b>
+            Reach Us
+        </b>
+        </div>
+        <div class="quote">
+            ...<br>Have a question or proposal in mind?<br> Get in touch with us.
+        </div>
+        <div class="float-right">
+
+        </div>
+    </div>
+
+
+
+
+    <div class="form">
+        <form action="">
+            <div class="icon-container">
+                <label for="">Name:</label>
+                <span class="icon"><i class="fas fa-user"></i></span>
+                <input type="text" value="Name" required>
+            </div>
+            <div class="icon-container">
+                <label for="">Email-Id:</label>
+                <span class="icon"><i class="mail fas fa-at"></i></span>
+                <input type="email" value="abcd@wxyz.pqrs" required>
+            </div>
+            <div class="icon-container">
+                <label for="">Name Of Organisation:</label>
+                <span class="icon"><i class="un far fa-user-circle"></i></span>
+                <input type="text" value="abc_123" required>
+            </div>
+            <div>
+                <label for="">Sector:</label><br><br>
+                <input type="checkbox" name="" value="">Education
+                <input type="checkbox" name="" value="">Finance
+                <input type="checkbox" name="" value="">IT
+                <input type="checkbox" name="" value="">Industrials
+                <input type="checkbox" name="" value="">Others
+            </div><br>
+            <div>
+                <label for="">Bio:</label>
+                <input type="text">
+            </div>
+            <div class="icon-container">
+                <label for="">URL(videos or websites to prefer):</label>
+                <span class="icon"><i class="mail fas fa-at"></i></span>
+                <input type="email" value="abcd@wxyz.pqrs" required>
+            </div>
+            <div>
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="map float-right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.745672329784!2d77.0980165!3d28.451333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d76bb8b778bb88f!2sSAIF%20Partners!5e0!3m2!1sen!2sin!4v1584731503547!5m2!1sen!2sin" width="600" height="450"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <br>
+    <div class="map float-right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.745672329784!2d77.0980165!3d28.451333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d76bb8b778bb88f!2sSAIF%20Partners!5e0!3m2!1sen!2sin!4v1584731503547!5m2!1sen!2sin" width="600" height="450"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(e) {
+            document.body.classList.remove('fade');
+        });
+    </script>
+
+</body>
+
+</html>

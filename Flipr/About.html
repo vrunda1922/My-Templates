@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/ScrollFx.js-master/dist/ScrollFx.js"></script>
+</head>
+<style>
+    .heading {
+        font-size: 100px;
+        padding: 50px;
+        text-align: left;
+        width: 100%;
+        height: 500px;
+        /* background: rgb(201, 207, 243);
+        background: linear-gradient(110deg, rgba(201, 207, 243, 1) 1%, rgba(164, 174, 248, 1) 45%, rgba(121, 138, 248, 1) 50%, rgba(1, 24, 150, 1) 55%, rgba(2, 36, 134, 1) 100%); */
+        /* color: rgba(2, 36, 134, 1); */
+        background-color: whitesmoke;
+        color: lightcoral;
+    }
+    
+    .quote {
+        font-style: italic;
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    
+    .heading .float-right {
+        height: 500px;
+        width: 820px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: lightcoral;
+        -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .info1 {
+        margin: 100px 10px;
+        padding: 15px;
+        height: 400px;
+        box-shadow: 1px 1px 9px #23232354;
+    }
+    
+    .info1 .main-p {
+        font-size: 62px;
+        text-align: center;
+        padding: 20px;
+        margin: 30px 190px;
+        margin-top: 0px;
+    }
+    
+    .info1 .side-p {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    
+    .info2 .main-p {
+        margin: 30px 90px;
+        font-size: 40px;
+    }
+    
+    .info2 .side-p {
+        /* float: right; */
+        margin-top: 10px;
+    }
+    
+    .info2 img {
+        width: 300px;
+        height: 300px;
+        margin: 35px;
+    }
+    
+    button {
+        border-radius: 50%;
+        background-color: black;
+    }
+    
+    body {
+        opacity: 1;
+        transition: 1s opacity;
+    }
+    
+    body.fade {
+        opacity: 0;
+        transition: none;
+    }
+</style>
+
+<body>
+    <script>
+        document.body.classList.add('fade');
+    </script>
+
+    <div class="heading"><br>
+        <div><b>
+            ABOUT
+        </b>
+        </div>
+        <div class="quote">
+            ...<br>Supporting visionary entrepreneurs<br> across diverse sectors.
+        </div>
+        <div class="float-right">
+
+        </div>
+    </div>
+
+    <div class="info1">
+        <img src="http://www.saifpartners.com/wp-content/uploads/About-mid.jpg" class="float-left" alt="">
+        <p class="center-align side-p">INDIA FOCUSED</p>
+        <p class="float-right main-p">From Seed to <br>Growth Capital</p>
+    </div>
+    <div class="info1 info2">
+        <img src="http://www.saifpartners.com/wp-content/uploads/BMS.png" class="float-left" alt="">
+        <p class="float-right main-p"> “SAIF as an organization thinks like us. The team <br>is very grounded and humble; they have a large<br> vision about where they want their companies to go”
+            <br><span class="float-right side-p"><br><br>ASHISH HEMRAJANI
+                <br>Founder and CEO, BookMyShow </span>
+        </p>
+    </div>
+
+    <!-- 
+    <div class="info2">
+        “SAIF as an organization thinks like us. The team is very grounded and humble; they have a large vision about where they want their companies to go”
+
+        <br>ASHISH HEMRAJANI
+        <br>Founder and CEO, BookMyShow -->
+    <!-- 
+        <br>“Other VCs did not give enough time to explain our business. But SAIF agreed to invest in us 24 hours after the first meeting”
+
+        <br>VSS MANI
+        <br>Founder and CEO, Justdial
+
+        <br>“SAIF as an organization thinks like us. The team is very grounded and humble; they have a large vision about where they want their companies to go”
+
+        <br>ASHISH HEMRAJANI
+        <br>Founder and CEO, BookMyShow
+
+        <br>“Other VCs did not give enough time to explain our business. But SAIF agreed to invest in us 24 hours after the first meeting”
+
+        <br>VSS MANI
+        <br>Founder and CEO, Justdial -->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(e) {
+            document.body.classList.remove('fade');
+        });
+    </script>
+
+</body>
+
+</html>

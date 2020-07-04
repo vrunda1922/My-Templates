@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/ScrollFx.js-master/dist/ScrollFx.js"></script>
+</head>
+<style>
+    .nav-btn {
+        opacity: 1;
+    }
+    
+    .nav-btn .nav {
+        z-index: 10000;
+        background: #dcdcdc1f;
+        width: 100%;
+        padding: 15px;
+        top: 0;
+        box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.08);
+        margin-bottom: 5px;
+        text-align: right;
+    }
+    
+    .nav-btn .fas {
+        margin-right: 5px;
+    }
+    
+    .nav-btn .far {
+        margin-right: 7px;
+    }
+    
+    .nav-btn .fab {
+        margin-right: 7px;
+    }
+    
+    .nav-btn .nav-item {
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        font-family: Open Sans, sans-serif;
+        border-radius: 5px;
+        height: 70px;
+    }
+    
+    .nav-btn .nav .tomato:hover {
+        box-shadow: 0px 5px 6px 0px rgba(245, 112, 89, 0.24);
+    }
+    
+    .nav-btn .nav .blue:hover {
+        box-shadow: 0px 5px 6px 0px rgba(92, 168, 230, 0.24);
+    }
+    
+    .nav-btn .nav .pink:hover {
+        box-shadow: 0px 5px 6px 0px rgba(245, 107, 89, 0.24);
+    }
+    
+    .nav-btn .nav .green:hover {
+        box-shadow: 0px 5px 6px 0px rgba(82, 235, 77, 0.24);
+    }
+    
+    .nav-btn .nav .violet:hover {
+        box-shadow: 0px 5px 6px 0px rgba(238, 130, 238, 0.377);
+    }
+    
+    .nav-btn .nav .gold:hover {
+        box-shadow: 0px 5px 6px 0px rgba(216, 173, 65, 0.295);
+    }
+    
+    .nav-btn .nav .brown:hover {
+        box-shadow: 0px 5px 6px 0px rgba(204, 114, 50, 0.404);
+    }
+    
+    .heading {
+        font-size: 100px;
+        padding: 50px;
+        text-align: left;
+        width: 100%;
+        height: 500px;
+        /* background: rgb(201, 207, 243);
+        background: linear-gradient(110deg, rgba(201, 207, 243, 1) 1%, rgba(164, 174, 248, 1) 45%, rgba(121, 138, 248, 1) 50%, rgba(1, 24, 150, 1) 55%, rgba(2, 36, 134, 1) 100%); */
+        /* color: rgba(2, 36, 134, 1); */
+        background-color: whitesmoke;
+        color: rgb(110, 165, 84);
+    }
+    
+    .quote {
+        font-style: italic;
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    
+    .heading .float-right {
+        height: 500px;
+        width: 820px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgb(110, 165, 84);
+        -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .card {
+        /* margin-top: 100px;
+        margin-left: 30px; */
+        height: 300px;
+        width: 300px;
+        float: left;
+        box-shadow: 1px 1px 5px 2px #23232333;
+        font-size: 25px;
+        padding: 50px;
+        border-radius: 5px;
+        color: #232323;
+        transition: 0.3s ease-in-out;
+        margin: 80px;
+    }
+    
+    .card:hover {
+        box-shadow: 3px 3px 8px 2px #23232363;
+    }
+    
+    body {
+        opacity: 1;
+        transition: 1s opacity;
+    }
+    
+    body.fade {
+        opacity: 0;
+        transition: none;
+    }
+</style>
+
+<body>
+    <script>
+        document.body.classList.add('fade');
+    </script>
+
+    <div class="heading"><br>
+        <div><b>
+            NEWS
+        </b>
+        </div>
+        <div class="quote">
+            ...<br>Get the latest updates and insights about<br> our company.
+        </div>
+        <div class="float-right">
+
+        </div>
+
+        <div class="nav-btn">
+            <nav class="nav">
+                <a class="nav-item tomato" href="portfolio.html"> Portfolio</a>
+                <a class="nav-item blue" href="Team.html">  Team</a>
+                <a class="nav-item pink" href="About.html">  About us</a>
+                <a class="nav-item green" href="News.html"> News</a>
+                <a class="nav-item black" href="ReachUs.html"> Reach Us</a>
+            </nav>
+        </div>
+
+        <div class="body scroll-fx-stagger-container" data-stagger=".02" data-offset="0.1">
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>India’s Meesho raises $125M to expand its social commerce business</b>
+                <br> </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>UrbanClap, India’s largest home services startup, raises $75M
+                </b>
+                <br> </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>Twitter leads $100M round in top Indian regional social media platform ShareChat
+                </b>
+            </div>
+            <div class="card fadeIn scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>The N.I.K.E. Framework – meeting the content needs of India’s users
+            </div>
+            <div class="card scroll-fx " data-translate-y="100" data-opacity="0">
+                <b>SAIF Partners catches them young, makes big bucks with seed stage bets</b>
+            </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>The making of ShareChat story and the way forward
+                </b>
+            </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>'Start-up' journey of Alok Goel: From employee to investor
+                </b>
+            </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>Why is it important to think through your fundraise ask before starting the fundraise</b>
+            </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>What are you building – a business, product or hack?</b>
+            </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b> India Startup Ecosystem & SAIF Partners with Deepak Gaur</b>
+            </div>
+            <div class="card scroll-fx" data-translate-y="100" data-opacity="0">
+                <b>Saif Partners | Betting big on tech revolution</b>
+            </div>
+
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(e) {
+                document.body.classList.remove('fade');
+            });
+        </script>
+
+</body>
+
+</html>
+
+<script>
+    window.addEventListener('load', function() {
+        var instance = new ScrollFx();
+    })
+
+
+
+    var instance = new ScrollFx({
+        offset: .2,
+        distance: .3,
+        translateX: 0,
+        translateY: 0,
+        translateZ: 0,
+        translateUnit: 'px',
+        skewX: 0,
+        skewY: 0,
+        scale: 1,
+        rotate: 0,
+        opacity: 1,
+        blur: 0,
+        easing: 'ease-out',
+    });
+</script>

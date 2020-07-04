@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #page-top {
+        background: #000;
+        color: #FFF;
+        line-height: 1;
+    }
+    
+    #page-top .monoliths {
+        display: flex;
+        padding-bottom: 1em;
+        overflow: hidden;
+    }
+    
+    #page-top .monoliths li {
+        width: 25%;
+    }
+    
+    #page-top .monoliths a {
+        color: inherit;
+        text-decoration: inherit;
+        display: block;
+        padding: 1px;
+    }
+    
+    #page-top .monoliths img {
+        display: block;
+        height: 33rem;
+        width: 100%;
+    }
+    
+    #page-top .monoliths div {
+        padding: 0.5em 0;
+    }
+    
+    #page-top .monoliths strong {
+        display: block;
+        font-weight: 900;
+    }
+    
+    #page-top .monoliths img {
+        display: block;
+        height: 33rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 20%;
+    }
+    
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        #page-top .monoliths li {
+            width: 37.5%;
+            -webkit-clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+            clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+        }
+    }
+    
+    #page-top .monoliths li {
+        width: 37.5%;
+        margin-right: -7.5%;
+        -webkit-clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+        clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    }
+    
+    #page-top .monoliths div {
+        padding-left: 2%;
+        padding-right: 26%;
+    }
+    
+    #page-top .monoliths strong {
+        padding-left: 1%;
+    }
+    
+    @media (max-width: 35rem) {
+        #page-top .monoliths div {
+            opacity: 0.01
+        }
+    }
+    
+    #page-top .monoliths div {
+        padding-left: 3%;
+        padding-right: 26%;
+        border-top: 2px solid transparent;
+        background: linear-gradient(100deg, hsl(292deg, 50%, 50%) 50%, transparent 85%);
+        background-clip: padding-box;
+    }
+</style>
+
+<body>
+    <div id="page-top">
+        <ul class="monoliths">
+            <li>
+                <a href="https://aneventapart.com/speakers/rachel-andrew">
+                    <img src="/img/portfolio-bg.jpg" alt="">
+                    <div>
+                        <strong>Rachel Andrew</strong> CSS Grid
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://aneventapart.com/speakers/derek-featherstone">
+                    <img src="/img/portfolio-bg.jpg" alt="">
+                    <div>
+                        <strong>Derek Featherstone</strong> Accessibility
+                    </div>
+                </a>
+            </li>
+            <li>
+                …
+            </li>
+            <li>
+                …
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

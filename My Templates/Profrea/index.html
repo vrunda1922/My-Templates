@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+    .tab-badge {
+        border-radius: 50%;
+        border: 2px solid #b8b6b6;
+    }
+    
+    .form-control {
+        display: inline-block;
+    }
+    
+    img {
+        border-radius: 50%;
+    }
+    
+    div.text-center {
+        padding-left: 40px;
+    }
+    
+    .shadow {
+        box-shadow: 2px 2px 8px #83838344 !important;
+    }
+    
+    .task {
+        border: 2px solid #ffc002;
+        box-shadow: 2px 2px 5px #fcebb759;
+        display: inline-block !important;
+    }
+    
+    .task:hover {
+        box-shadow: 2px 2px 5px #ffc00459;
+    }
+</style>
+
+<body>
+    <header class="mb-5">
+        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">
+                    <span class="badge tab-badge">1</span>&nbsp; About Yourself
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="true">
+                    <span class="badge tab-badge">2</span>&nbsp;Contact Info
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="true">
+                    <span class="badge tab-badge">3</span>&nbsp;Education
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="true">
+                    <span class="badge tab-badge">4</span>&nbsp;Preview
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="tab-content" id="pills-tabContent">
+            <section class="container text-center tab-pane fade show active shadow rounded p-1" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                <h1 class="h1 m-3"> Basic Info</h1>
+                <div class="row text-center">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="first-name" class="my-3">First Name<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input required type="text" class="w-50 form-control my-3" placeholder="First" name="First">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="last-name" class="my-3">Last Name<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input required type="text" class="w-50 form-control my-3" placeholder="Last" name="Last">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="dob" class="my-3">DOB<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input required type="date" class="w-50 my-3 form-control" name="DOB">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="ph" class="my-3">Ph. No.<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input required type="text" class="w-50 my-3 form-control" name="PhNo">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="email" class="my-3">E-mail<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input required type="email" class="w-50 my-3 form-control" name="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 m-3">
+                        <section class="row">
+                            <div class="col-md-12">
+                                <img src="img/upload profile.png" height="70%" width="70%" alt="" class="m-3">
+                                <a class="btn btn-warning">Upload Photo</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <a class="btn btn-warning m-3 next" data-toggle="pill" href="#pills-2">Next</a>
+            </section>
+            <section class="container text-center tab-pane fade shadow rounded p-3" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                <h1 class="h1 m-3">Address</h1><br>
+                <section class="row text-center">
+                    <div class="col-md-5 m-2">
+                        <label for="mail1" class="h4">Mail Address</label><br><br><br>
+                        <input required type="text" placeholder="Address Line 1" class="form-control w-100 m-3 mt-4"><br>
+                        <input required type="text" placeholder="Address Line 2" class="form-control w-100 m-3">
+                        <input required type="text" class="form-control w-25 m-3" placeholder="City">
+                        <input required type="text" class="form-control w-25 m-3" placeholder="State">
+                        <input required type="text" class="form-control w-25 m-3" placeholder="ZIP code">
+                    </div>
+                    <div class="col-md-6 m-2">
+                        <h4 class="h4">Permanent Address</h4><br>
+                        <input required type="checkbox" value="0"><label for="same" class="m-1">Same as Mail Address</label>
+                        <input required type="text" placeholder="Address Line 1" class="form-control w-100 m-3"><br>
+                        <input required type="text" placeholder="Address Line 2" class="form-control w-100 m-3">
+                        <input required type="text" class="form-control w-25 m-3" placeholder="City">
+                        <input required type="text" class="form-control w-25 m-3" placeholder="State">
+                        <input required type="text" class="form-control w-25 m-3" placeholder="ZIP code">
+                    </div>
+                </section>
+                <span class="m-3 btn btn-warning back">Back</span>
+                <span class="m-3 btn btn-warning next">Next</span>
+            </section>
+            <section class="container text-center tab-pane fade shadow rounded p-3" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                <h1 class="h1 m-3">Education</h1>
+                <section class="row">
+                    <div class="col-md-6">
+                        <section class="row">
+                            <div class="col-md-4">
+                                <label for="email" class="my-3">Higher Education<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-8">
+                                <input required type="text" class="form-control m-3 w-50" placeholder="B Tech">
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md-6">
+                        <section class="row">
+                            <div class="col-md-4">
+                                <label for="email" class="my-3">Skills<span class="text-danger">*</span> : </label>
+                            </div>
+                            <div class="col-md-8">
+                                <span>
+                                    <input required type="text" class="form-control w-50 adder float-left mt-3">
+                                    <a class="add btn btn-warning my-3 mx-0 float-left"><i class="fas fa-plus"></i></a><br>
+                                   </span>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="col-md-6">
+                        <h4 class="h4 m-3">Resume</h4>
+                        <div class="bg-light p-4 m-3">
+                            <a class="btn btn-warning">Upload</a>
+                            <span class="font-italic">Or drag files here..</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="h4 m-3">Education Docs</h4>
+                        <div class="bg-light p-4 m-3 mb-1">
+                            <a class="btn btn-warning">Upload</a>
+                            <span class="font-italic">Or drag files here..</span>
+                        </div>
+                        <div class="font-italic">Upload Education related documents here..</div>
+                    </div><br>
+                </section>
+                <span class="m-3 btn btn-warning back">Back</span>
+                <span class="m-3 btn btn-warning next">Next</span>
+            </section>
+            <section class="container text-center tab-pane fade shadow rounded" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
+                <h1 class="h1">Preview</h1>
+                <h2 class="h2 m-3">Basic Info</h2>
+                <div class="review row" text-center>
+                    <div class="col-md-8">
+                        <section class="row">
+                            <div class="col-md-4">
+                                First Name :
+                            </div>
+                            <div class="col-md-8">
+                                <span class="first form-control my-2 review block"></span>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-md-4">
+                                Last Name :
+                            </div>
+                            <div class="col-md-8">
+                                <span class="last review my-2 form-control"></span>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-md-4">
+                                DOB :
+                            </div>
+                            <div class="col-md-8">
+                                <span class="DOB review my-2 form-control"></span>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-md-4">
+                                Ph. No. :
+                            </div>
+                            <div class="col-md-8">
+                                <span class="PhNo review my-2 form-control"></span>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-md-4">
+                                Email :
+                            </div>
+                            <div class="col-md-8">
+                                <span class="Email review my-2 form-control"></span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="bg-light p-4">
+                    <span class="float-left">Rate your Experience</span><br><br>
+                    <div>
+                        <label for="" class="float-left">Very Satisfied</label>
+                        <input required type="radio" class="form-control inline" name="rating" value="very unsatisfied" id="very unsatisfied">
+                    </div>
+                    <div>
+                        <label for="" class="float-left">Very Satisfied</label>
+                        <input required type="radio" class="form-control" name="rating" value="unsatisfied" id="unsatisfied">
+                    </div>
+                    <div>
+                        <label for="" class="float-left">Very Satisfied</label>
+                        <input required type="radio" class="form-control" name="rating" value="Neutral" id="Neutral">
+                    </div>
+                    <div>
+                        <label for="" class="float-left">Very Satisfied</label>
+                        <input required type="radio" class="form-control" name="rating" value="Satisfied" id="Satisfied">
+                    </div>
+                    <div>
+                        <label for="" class="float-left">Very Satisfied</label>
+                        <input required type="radio" class="form-control" name="rating" value="very Satisfied" id="Very Satisfied">
+                    </div>
+                </div>
+                <span class="m-3 btn btn-warning begin">Back to Edit</span>
+                <span class="m-3 btn btn-warning">Submit</span>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $('.next').click(function() {
+            var Id = $(this).attr('id');
+            console.log(Id);
+            $(this).parent().removeClass('show active')
+            $(this).parent().next().addClass('show active');
+            $('a[href="tab-pills-1"]').removeClass('active');
+            $('a[href=Id]').next().addClass('active');
+        });
+        $('.back').click(function() {
+            $(this).parent().removeClass('show active')
+            $(this).parent().prev().addClass('show active');
+        });
+        $('.add').click(function() {
+            var taskContent = $('.adder').val();
+            $(this).parent().parent().append($('<div class="task rounded w-25 m-3 mx-5 p-1 inline-block">').text(taskContent, '<i class="far fa-times-circle"></i>'));
+        });
+        $('input[name^="First"]').blur(function() {
+            $('.first').text($(this).val());
+        })
+        $('input[name^="Last"]').blur(function() {
+            $('.last').text($(this).val());
+        })
+        $('input[name^="DOB"]').blur(function() {
+            $('.DOB').text($(this).val());
+        })
+        $('input[name^="PhNo"]').blur(function() {
+            $('.PhNo').text($(this).val());
+        })
+        $('input[name^="Email"]').blur(function() {
+            $('.Email').text($(this).val());
+        })
+    });
+</script>
